@@ -13,7 +13,9 @@
 */
 
 //your code here
-
+function uselessFunction() {
+	return null;
+}
 //end your code
 
 var bar = 'not a function';
@@ -30,7 +32,18 @@ var barType = typeof bar;
 */
 
 //your code here
-
+bar = function(float) {
+	var index;
+	for(index = 0; index<float.length; index++){
+		if(typeof float[index] == 'number') {
+			float[index] = float[index] * 2;
+		}
+		else {
+			return false;
+		}
+	}
+	return true;
+};
 //end your code
 
 /**

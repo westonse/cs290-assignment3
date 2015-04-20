@@ -7,10 +7,15 @@
 * It should be returned directly by the following function
 * @return {object} - the object literal
 */
-
+var objectLiteral = {
+   brand: "Pepperidge Farm",
+   count: 2000,
+   flavor: "Cheddar",
+   type: "Goldfish"
+   };
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  return objectLiteral; //Modify ONLY this line
   //end your code
 }
 
@@ -38,7 +43,43 @@ function returnObjectLiteral() {
 */
 
 //your code here
+function MessageLog(user_name) {
+ this.user = user_name;
+ this.numReceived = 0;
+ this.numSent = 0;
+ this.sentMessages = [];
+ this.lastReceived = "";
+}
 
+MessageLog.prototype.logMessage = function (messageText, direction) {
+var index;
+if (direction === 1) {
+	this.numReceived = this.numReceived + 1;
+	this.lastReceived = messageText;
+}
+else if(direction === 0) {
+ if (this.numSent <= 5) {
+  this.sentMessages[this.numSent] = messageText; 
+  this.numSent = this.numSent + 1 }
+ else {
+  for(index = 0; index<4; index++) {
+   this.sentMessages[index] = this.sentMessages[index+1];
+   this.sentMessages[4] = messageText;
+  }
+ }
+}
+};
+MessageLog.prototype.getSentMessage = function(n) {
+	return this.sentMessages[4-n+1];
+};
+
+MessageLog.prototype.totalSent = function() {
+	return this.numSent;
+};
+
+MessageLog.prototype.totalReceived = function() {
+	return this.numReceived;
+};
 //end your code
 
 /**
@@ -47,7 +88,9 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function() {
+	return this.lastReceived;
+};
 //end your code
 
 /**
@@ -57,5 +100,9 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+myLog = new MessageLog("BlackHatGuy");
+myLog.logMessage("foo",1);
+myLog.logMessage("bar",1);
+myLog.logMessage("baz",1);
 //end your code
+
