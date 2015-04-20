@@ -99,14 +99,15 @@ function GitLog(hash, date, message) {
 			else {
 				gitDate = gitDate + "-" + splitString[index2];}
 		}
-		gitDate = gitDate + "T" + splitString[5];
+		gitDate = gitDate + " " + splitString[5];
 		gitLog.date = new Date(gitDate);
 		for(index3 = 7; index3<splitString.length; index3++) {
 			if(index3==7){
-				gitLog.message = gitLog.message + splitString[index3] + " ";}
+				gitLog.message = gitLog.message + splitString[index3];}
 			else {
 				gitLog.message = gitLog.message + " " + splitString[index3];}
 		}
+		gitLog.message = gitLog.message.replace(/['"]+/g,"");
 		logArray[logArray.length] = gitLog;
 	}
 	return logArray;
