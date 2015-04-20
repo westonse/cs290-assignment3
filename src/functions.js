@@ -79,7 +79,7 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-function parseGit(stringArray) {
+ function parseGit(stringArray) {
 	logArray = [];
 	var index;
 	var curString;
@@ -92,14 +92,23 @@ function parseGit(stringArray) {
 		splitString = curString.split(" ");
 		gitLog = new GitLog("","","");
 		gitLog.hash = splitString[0];
-		for(index2 = 1; index2<7; index2++) {
-			gitLog.date = gitLog.date + splitString[index2];
+		var gitDate="";
+		for(index2 = 1; index2<5; index2++) {
+		    if(index2==1) {
+				gitDate = gitDate + splitString[index2];}
+			else {
+				gitDate = gitDate + "-" + splitString[index2];}
 		}
-		for(index3 = 7; index2<splitString.length; index3++) {
-			gitLog.message = splitString[index3];
+		gitDate = gitDate + "T" + splitString[5];
+		gitLog.date = new Date(gitDate);
+		for(index3 = 7; index3<splitString.length; index3++) {
+			if(index3==7){
+				gitLog.message = gitLog.message + splitString[index3] + " ";}
+			else {
+				gitLog.message = gitLog.message + " " + splitString[index3];}
 		}
 		logArray[logArray.length] = gitLog;
 	}
-	return gitLog;
-}
+	return logArray;
+}  
 //end your code
