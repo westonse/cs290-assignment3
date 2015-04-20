@@ -79,5 +79,27 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-
+function parseGit(stringArray) {
+	logArray = [];
+	var index;
+	var curString;
+	var splitString;
+	var curSplitString;
+	var index2;
+	var index3;
+	for(index = 0; index<stringArray.length; index++) {
+		curString = stringArray[index];
+		splitString = curString.split(" ");
+		gitLog = new GitLog("","","");
+		gitLog.hash = splitString[0];
+		for(index2 = 1; index2<7; index2++) {
+			gitLog.date = gitLog.date + splitString[index2];
+		}
+		for(index3 = 7; index2<splitString.length; index3++) {
+			gitLog.message = splitString[index3];
+		}
+		logArray[logArray.length] = gitLog;
+	}
+	return gitLog;
+}
 //end your code
