@@ -1,0 +1,30 @@
+#Favorites{
+	width:20%;
+	height: 100%;
+	background-color: red;
+	float: left;
+	text-align: center;
+	border-style: solid;
+	
+
+}
+#Results{
+	width:50%;
+	height: 100%;
+	background-color: pink;
+	float: right;
+	text-align: center;
+	border-style: solid;
+	
+
+}
+h1{
+	text-align: center;
+	background-color: blue;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+}

@@ -1,1 +1,27 @@
-dasd
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "Seths_Gists.css">
+	<script src="Seths_Gists.js"></script>
+</head>
+<body id = "body">
+	<h1> Welcome to Seth's Gist Finder </h1>
+	<p> Note: the search button will provide a result of 30 gists from
+		the gist API at github. Each found gist in the search is displayed in the results
+		section as the description of that gist that doubles as an embedded link to the HTML version that gist.
+		Thus, any gist found with no description will appear with a "No description" tag next to an add button.
+		Any result found with a description that is already in the favorites menu will not be displayed even 
+		if found in the search. Add and remove gists to the favorites menu with the provided buttons.
+		Language filtering and pagnation does not operate so selecting those options will not do anything.</p>
+	<div id = "Favorites"> <p> Favorites <p> </div>
+	<div id = "Results"> <p> Results <p> </div>
+	<input type="button" value="Search for Gists" onclick = "displayGists()" style = "margin-left: 20px"> <br>
+	<input type = "text" name = "gist_input"> <br>
+	<input type="checkbox" name="JSON_Box" value="Salem">JSON<br>
+	<input type="checkbox" name="Javascript_Box" value="Javascript">Javascript<br> 
+	<input type="checkbox" name="Python_Box" value="Python">Python<br>
+	<input type="checkbox" name="SQL_box" value="SQL">SQL<br>
+	<input type="number" id="numPages" min="1" max="5" value="1">Enter num Pages 1-5
+
+</body>
+</html>
