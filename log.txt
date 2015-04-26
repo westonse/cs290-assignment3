@@ -1,1 +1,39 @@
-You log goes in this  file.
+Note: I forgot to make commits while working on the second part of the assignment other than 
+the initial and final commit of part 2. So, I approximated each work session that I forgot to commit in the same 
+format. 
+
+Start: Sat, 25 Apr 2015 12:00:00 -0700
+End: Sat, 25 Apr 2015 18:41:11 -0700
+Tasks: Figured out issues with adding and removing favorites. Final files.
+
+Start: Fri, 24 Apr 2015 12:00:00 -0700
+End: Fri, 25 Apr 2015 17:00:00 -0700
+Tasks: Adding and removing favorites functions started. Having issues
+
+Start: Th, 23 Apr 2015 18:00:00 -0700
+End: Th, 23 Apr 2015 23:30:00 -0700
+Tasks: Got live website up and running with ajax calls returning good data.
+
+Start: Wed, 22 Apr 2015 12:30:00 -0700
+End: Wed, 22 Apr 2015 14:39:28 -0700
+Tasks: Initial commit of part 2. 
+
+Start: Mon, 20 Apr 2015 08:00:00 -0700
+End: Mon, 20 Apr 2015 08:58:23 -0700
+Tasks: Part one of assignment done.
+
+Start: Sun,19 Apr 2015 21:00:00  -0700
+End:   Sun,19 Apr 2015 21:54:15 -0700
+Tasks: Almost finished with functions file. 
+
+Start: Sun, 19 Apr 2015 20:00:00 -0700
+End: Sun, 19 Apr 2015 20:30:28 -0700
+Tasks: Finished objects file and began funtions file.
+
+Start: Sun, 19 Apr 2015 16:00:00 -0700
+End: Sun, 19 Apr 2015 17:36:05 -0700
+Tasks: Finished variable modification.
+
+Start: 
+End: Sun, 12 Apr 2015 03:54:42 -0700
+Tasks: Modified TA account.
